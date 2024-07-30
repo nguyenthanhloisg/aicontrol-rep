@@ -1,0 +1,218 @@
+/** breadcrumb **/
+.breadcrumb-header {
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	transform-style: preserve-3d;
+	
+	height: 120px;
+	position: relative;
+}
+.breadcrumb-header .breadcrumb-header-content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+}
+.breadcrumb-header .breadcrumb-header-content h2 {
+	margin-top: 0;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+}
+.breadcrumb-header .breadcrumb-header-content .breadcrumb-link {
+	padding: 0;
+	margin: 0;
+	background: none;
+	box-shadow: none;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	color: #ccc;
+	text-transform: uppercase;
+}
+.breadcrumb-header .breadcrumb-header-content .breadcrumb-link a {
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+	color:#fff;
+	transition: all 0.6s ease 0s;
+}
+.breadcrumb-header .breadcrumb-header-content .breadcrumb-link .active span {
+	color: #fff!important;
+}
+
+
+/*------------------------------------
+Login + resgister
+------------------------------------*/
+
+.form-account {
+	max-width: 370px; 
+	text-align:left; 
+	margin: 0px auto; 
+	padding: 15px; 
+	border: 1px solid #eee;
+	margin-top: 30px;
+}
+.form-account h2 {
+	line-height: 24px;
+	font-weight: bold;
+	color: #343e47;
+	text-align: center;
+	text-transform: uppercase;
+}
+form {
+	display: inline-block;
+	width: 100%;
+}
+.form-account label {
+	color: #232222;
+	line-height: 18px;
+	padding: 0 0 10px 0;
+	font-weight: normal;
+}
+span.required { color: red; }
+.form-account input[type="email"],
+.form-account input[type="password"], 
+.form-account input[type="text"] {
+	padding: 15px;
+	background: #f4f4f4;
+	border-radius: 0;
+	border: none;
+	line-height: 20px;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0px;
+	text-align: left;
+	color: #777777;
+	width: 100%;
+}
+.form-row .button {
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+}
+.form-row label.inline { 
+	display: inline-block;
+	width: auto;
+	float: none; 
+}
+.form-row .button.button-secondary, .form-row label.inline a.button {
+	display: inline-block;
+	margin-right: 10px;
+	width: auto;
+	background: #fff;
+	height: auto;
+	border: 1px solid #4a4d54;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-family: "montserratbold", Helvetica, Arial, sans-serif;
+	color: #4a4d54;
+	vertical-align: middle;
+	position: relative;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+.form-row .button.button-secondary:hover, .form-row label.inline a.button:hover {
+	background: #4a4d54;
+	color: #fff;
+}
+p.lost_password { margin-bottom: 0; margin-top: -15px; }
+.customer_address .border-btn a { color:#4a4d54; }
+.customer_address .border-btn:hover a { color:#fff;}
+
+/*---------------------------------------------------
+ACCOUNT PAGE + ORDER PAGE + ADDRESS PAGE
+---------------------------------------------------*/
+input, textarea {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	display: inline-block;
+	border-width: 1px;
+	border-style: solid;
+	background: #f4f4f4;
+	margin: 0;
+	padding: 11px 15px;
+	text-align: left;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	letter-spacing: 0.25px;
+	line-height: 18px;
+	color: #808080;
+	border-color: #e8e8e8;
+	font-size: 14px;
+}
+input:focus {outline: none;}
+.title-account-page {
+	line-height: 24px;
+	font-weight: 600;
+	color: #343e47;
+	padding: 10px 15px 10px 0;
+}
+.button-account li {margin-right: 10px;}
+.subheading_default {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #343e47;
+	font-size: 18px;
+	padding: 10px;
+	line-height: normal;
+	border: 1px dashed #ff7264;
+	max-width: 320px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#block-address input{
+	display: inline-block;
+	width: 15px;
+}
+.block-center{margin-bottom: 20px;}
+.address_btn{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+a.add-new-address {
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 15px;
+	font-size: 12px;
+	display: inline-block;
+}
+a.add-new-address:hover, a.add-new-address:focus {color: #fff;}
+.address-page #address_form_new {margin-top: 10px;}
+body .address-page input[type="search"], 
+body .address-page input[type="text"], 
+body .address-page input[type="email"],  
+body .address-page select, 
+body .address-page textarea {
+	vertical-align: middle;
+	width: 100%;
+	max-width: 360px;
+}
+.address-page label {
+	display: block;
+	line-height: 18px;
+	padding: 0 0 10px 0;
+}
+.button-account {margin-bottom: 20px;}
+.button-account .button-exit {margin-right: 10px;}
+
+
+
+
+
+
+
+
+
+
