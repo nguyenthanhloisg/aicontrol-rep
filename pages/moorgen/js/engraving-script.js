@@ -96,32 +96,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Khôi phục img src từ sessionStorage khi tải lại trang
     window.addEventListener('load', () => {
-        rows.forEach(row => {
-            const buttonId = `icon-selector-${row}`;
-            const button = document.getElementById(buttonId);
-            const savedSrc = sessionStorage.getItem(buttonId);
+        const rows = document.querySelectorAll('[id^="icon-selector-"]');
     
-            if (button) {
-                if (savedSrc) {
-                    button.src = savedSrc;
-                } else {
-                    // Đặt src mặc định nếu không có dữ liệu trong sessionStorage
-                    button.src = '../img/icon/light/light-icon-0.svg';
-                }
+        rows.forEach(button => {
+            const buttonId = button.id;
+            const savedSrc = sessionStorage.getItem(buttonId) || '../img/icon/light/light-icon-0.svg';
+            button.src = savedSrc;
     
-                const pickerId = buttonId.replace('icon-selector', 'icon-picker');
-                const iconPickerElement = document.getElementById(pickerId);
-                if (iconPickerElement) {
-                    if (savedSrc) {
-                        iconPickerElement.src = savedSrc;
-                    } else {
-                        // Đặt src mặc định nếu không có dữ liệu trong sessionStorage
-                        iconPickerElement.src = '../img/icon/light/light-icon-0.svg';
-                    }
-                }
+            const pickerId = buttonId.replace('icon-selector', 'icon-picker');
+            const iconPickerElement = document.getElementById(pickerId);
+            if (iconPickerElement) {
+                iconPickerElement.src = savedSrc;
             }
         });
-        saveElementAsImage('engravedImage')
+    
+        saveElementAsImage('engravedImage');
     });
     
     const detailedRows = [
