@@ -26,6 +26,23 @@ document.addEventListener("DOMContentLoaded", () => {
         updateText('input-' + row, 'sl-' + row);
     });
 
+    // Khôi phục img src từ sessionStorage khi tải lại trang
+    rows.forEach(row => {
+        const buttonId = `icon-selector-${row}`;
+        const button = document.getElementById(buttonId);
+        const savedSrc = sessionStorage.getItem(buttonId) || '../img/icon/light/light-icon-0.svg';
+
+        if (button) {
+            button.src = savedSrc;
+
+            const pickerId = buttonId.replace('icon-selector', 'icon-picker');
+            const iconPickerElement = document.getElementById(pickerId);
+            if (iconPickerElement) {
+                iconPickerElement.src = savedSrc;
+            }
+        }
+    });
+    saveElementAsImage('engravedImage');
     //show wrapperPopper
     rows.forEach(row => {
         const container = document.querySelector(`.icon-selector-container-outside.${row}`);
@@ -92,25 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             saveElementAsImage('engravedImage');
         });
-    });
-
-    // Khôi phục img src từ sessionStorage khi tải lại trang
-    window.addEventListener('load', () => {
-        const rows = document.querySelectorAll('[id^="icon-selector-"]');
-    
-        rows.forEach(button => {
-            const buttonId = button.id;
-            const savedSrc = sessionStorage.getItem(buttonId) || '../img/icon/light/light-icon-0.svg';
-            button.src = savedSrc;
-    
-            const pickerId = buttonId.replace('icon-selector', 'icon-picker');
-            const iconPickerElement = document.getElementById(pickerId);
-            if (iconPickerElement) {
-                iconPickerElement.src = savedSrc;
-            }
-        });
-    
-        saveElementAsImage('engravedImage');
     });
     
     const detailedRows = [
