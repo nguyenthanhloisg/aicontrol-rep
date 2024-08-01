@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const savedSrc = sessionStorage.getItem(buttonId);
 
-            const iconPickerElement = document.getElementById(pickerIdFF);
+            const iconPickerElementFF = document.getElementById(pickerIdFF);
             const buttonidElement = document.getElementById(buttonId);
             
-            if (iconPickerElement) {
+            if (iconPickerElementFF) {
                 if (savedSrc) {
                     buttonidElement.src = savedSrc;
-                    iconPickerElement.src = savedSrc;
+                    iconPickerElementFF.src = savedSrc;
                 } else {
                     // Đặt src mặc định nếu không có dữ liệu trong sessionStorage
-                    iconPickerElement.src = '../img/icon/light/light-icon-0.svg';
+                    iconPickerElementFF.src = '../img/icon/light/light-icon-0.svg';
                     buttonidElement.src = '../img/icon/light/light-icon-0.svg';
                 }
             }
