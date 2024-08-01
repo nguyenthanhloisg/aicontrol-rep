@@ -342,7 +342,7 @@ img {
     top: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: none;
     width: 18.5rem;
     height: 18.5rem;
     flex-direction: column;
@@ -429,7 +429,7 @@ img {
     align-items: stretch;
     width: 18.5rem;
     height: 18.5rem;
-    display: flex;
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -512,7 +512,7 @@ img {
     align-items: stretch;
     width: 18.5rem;
     height: 18.5rem;
-    display: flex;
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;

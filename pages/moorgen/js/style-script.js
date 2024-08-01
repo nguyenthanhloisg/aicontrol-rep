@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
 
     // Khôi phục img src từ sessionStorage khi tải lại trang
-    window.addEventListener('load', () => {
         rows.forEach(row => {
             const buttonId = `icon-selector-${row}`;
             const pickerId = `icon-picker-${row}`;
@@ -65,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    });
 
     rows.forEach(function (row) {
         updateText("input-" + row, "sl-" + row)
