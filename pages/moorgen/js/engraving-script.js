@@ -184,18 +184,18 @@ function updateText(inputId, displayId) {
     const inputElement = document.getElementById(inputId);
     const displayElement = document.getElementById(displayId);
 
-    // Lắng nghe sự kiện input và cập nhật sessionStorage
-    inputElement.addEventListener('input', function() {
-        displayElement.textContent = this.value;
-        sessionStorage.setItem(inputId, this.value);
-    });
-
     // Khôi phục dữ liệu từ sessionStorage nếu có
     if (sessionStorage.getItem(inputId)) {
         inputElement.value = sessionStorage.getItem(inputId);
         displayElement.textContent = inputElement.value;
-        saveElementAsImage('engravedImage')
     }
+
+    // Lắng nghe sự kiện input và cập nhật sessionStorage
+    inputElement.addEventListener('input', function() {
+        displayElement.textContent = this.value;
+        sessionStorage.setItem(inputId, this.value);
+        saveElementAsImage('engravedImage')
+    });
 }
 
 
