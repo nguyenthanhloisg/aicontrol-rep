@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         imageElement.alt = selectedImage;
         //show layout
         showLayout(selectedLayout);
-
     } else {
         imageElement.src = "../img/default.jpg";
         imageElement.alt = "Please go to start page";
@@ -121,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
     detailedRows.forEach(function(row) {
         updateText('input-' + row, 'dl-' + row);
     });
-
 
     // Add click event listener to the logo to clear sessionStorage
     document.getElementById("logo-link").addEventListener("click", () => {
