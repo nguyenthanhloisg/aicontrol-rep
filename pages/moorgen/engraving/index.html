@@ -29,6 +29,18 @@
         <script src="../js/engraving-script.js"></script>
     </head>
     <body>
+        <div class="loader"></div>
+        <script>
+            window.addEventListener("load", () => {
+                const loader = document.querySelector(".loader");
+            
+                loader.classList.add("loader--hidden");
+            
+                loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+                });
+            });
+        </script>
         <div id="style-page-content">
             <section class="navigation">
                 <a
