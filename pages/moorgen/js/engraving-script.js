@@ -40,9 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (iconPickerElement) {
                 iconPickerElement.src = savedSrc;
             }
+            saveElementAsImage('engravedImage');
         }
     });
-    saveElementAsImage('engravedImage');
+    
     //show wrapperPopper
     rows.forEach(row => {
         const container = document.querySelector(`.icon-selector-container-outside.${row}`);
@@ -127,8 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.clear()
     })
 
+    
 });
-
 
 function showLayout(layout) {
     // Hide all layouts
@@ -153,18 +154,18 @@ function updateText(inputId, displayId) {
     const inputElement = document.getElementById(inputId);
     const displayElement = document.getElementById(displayId);
 
-    // Khôi phục dữ liệu từ sessionStorage nếu có
-    if (sessionStorage.getItem(inputId)) {
-        inputElement.value = sessionStorage.getItem(inputId);
-        displayElement.textContent = inputElement.value;
-    }
-
     // Lắng nghe sự kiện input và cập nhật sessionStorage
     inputElement.addEventListener('input', function() {
         displayElement.textContent = this.value;
         sessionStorage.setItem(inputId, this.value);
-        saveElementAsImage('engravedImage')
     });
+
+    // Khôi phục dữ liệu từ sessionStorage nếu có
+    if (sessionStorage.getItem(inputId)) {
+        inputElement.value = sessionStorage.getItem(inputId);
+        displayElement.textContent = inputElement.value;
+        saveElementAsImage('engravedImage')
+    }
 }
 
 function saveElementAsImage(elementId) {
@@ -174,4 +175,5 @@ function saveElementAsImage(elementId) {
         sessionStorage.setItem("outputImage", imgData); // Lưu hình ảnh vào sessionStorage
     })
 }
+
 
